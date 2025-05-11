@@ -1,6 +1,5 @@
 # dotfiles-apollo
 This Repository contains my personal Dotfiles , Feel free to use any config which suits your setup.
-This Repository contains my personal Dotfiles , Feel free to use any config which suits your setup.
 
 
 <!-- ![2022-08-17-22:15:39-screenshot](https://user-images.githubusercontent.com/90280586/185196716-1993253f-8fdd-4fec-ba9a-234c2868a6a4.png) -->
