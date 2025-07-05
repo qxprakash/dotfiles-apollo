@@ -51,4 +51,6 @@ Here's a list of the key applications and components used in this configuration:
 ### To Be Implemented
 
 * [ ] Add web search functionality to Rofi, or ideally, integrate an AI assistant like ChatGPT.
+* [ ] Try out hyprland ?
+* [ ] Always listening self hosted llm with VAD and Endpointing.
 
