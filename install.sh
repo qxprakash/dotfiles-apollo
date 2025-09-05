@@ -154,6 +154,29 @@ git config --global user.name "Prakash"
 
 
 
+
+## install picom build dependencies
+sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev \
+libxcb-shape0-dev libpcre3-dev libxcb-render-util0-dev libxcb-render0-dev \
+libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev \
+libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev \
+libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev \
+meson ninja-build
+
+## build & install picom fork
+echo ">>> Building custom Picom"
+mkdir -p ~/source && cd ~/source
+if [ ! -d "picom" ]; then
+    git clone https://github.com/pijulius/picom.git
+fi
+cd picom
+git submodule update --init --recursive
+meson --buildtype=release . build
+ninja -C build
+sudo ninja -C build install
+cd ~
+rm -rf ~/source
+
 # install vscode context menu extension for nautilus 
 
 # wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
@@ -176,6 +199,8 @@ git config --global user.name "Prakash"
 ## yes Y | command-that-asks-for-input
 
 ## wget https://raw.githubusercontent.com/prakashex/dotfiles-apollo/popOs/install.sh && chmod +x install.sh &&  yes Y | ./install.sh
+
+
 
 
 
