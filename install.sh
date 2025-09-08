@@ -1,6 +1,9 @@
 #!/bin/bash
 shopt -s expand_aliases
 
+export DEBIAN_FRONTEND=noninteractive
+
+
 ## install regolith
 
 wget -qO - https://regolith-desktop.org/regolith.key | \
@@ -11,9 +14,9 @@ https://regolith-desktop.org/release-ubuntu-jammy-amd64 jammy main" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 
 
-sudo apt update
-sudo apt install regolith-desktop
-sudo apt upgrade
+sudo apt update -y
+sudo apt install -y regolith-desktop
+sudo apt upgrade -y
 
 ## restart
 
@@ -21,7 +24,7 @@ sudo apt upgrade
 
 ## install polybar rofi nitrogen lxappearance acpi
 
-sudo apt install polybar rofi flameshot transmission-gtk telegram-desktop mpv htop feh gh python3 python3-pip vim git nitrogen lxappearance libarchive-tools nemo xfce4-terminal gnome-tweaks intel-media-va-driver-non-free regolith-i3-workspace-config python-is-python3 network-manager-gnome
+sudo apt install -y polybar rofi flameshot transmission-gtk telegram-desktop mpv htop feh gh python3 python3-pip vim git nitrogen lxappearance libarchive-tools nemo xfce4-terminal gnome-tweaks intel-media-va-driver-non-free regolith-i3-workspace-config python-is-python3 network-manager-gnome
 
 
 ## install postman
@@ -31,19 +34,19 @@ sudo apt install polybar rofi flameshot transmission-gtk telegram-desktop mpv ht
 
 ## installing firefox nightly and brave
 
-sudo add-apt-repository ppa:ubuntu-mozilla-daily/ppa
-sudo apt update
+sudo add-apt-repository -y ppa:ubuntu-mozilla-daily/ppa
+sudo apt update -y
 sudo apt install firefox-trunk
 
-sudo apt install apt-transport-https curl
+sudo apt install -y apt-transport-https curl
 
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-sudo apt update
+sudo apt update -y
 
-sudo apt install brave-browser
+sudo apt install -y brave-browser
 
 
 ## download deb files
@@ -95,9 +98,9 @@ sudo mv /usr/share/themes/gtk-master/ /usr/share/themes/dracula
 
 ## Install Mousepad
 
-sudo apt install wget apt-transport-https gnupg2 software-properties-common
-sudo add-apt-repository ppa:xubuntu-dev/staging
-sudo apt install mousepad
+sudo apt install -y wget apt-transport-https gnupg2 software-properties-common
+sudo add-apt-repository -y ppa:xubuntu-dev/staging
+sudo apt install -y mousepad
 
 ## Prevent app store from getting started on startup
 
@@ -107,7 +110,7 @@ sudo mv io.elementary.appcenter-daemon.desktop io.elementary.appcenter-daemon.de
 
 # install picom build dependencies
 
-sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libpcre3-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
+sudo apt install -y libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libpcre3-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev libpcre2-dev libevdev-dev uthash-dev libev-dev libx11-xcb-dev
 
 # picom extra dependency on ubuntu server
 # commented the below code because a separate branch for ubuntu server was created
@@ -116,12 +119,12 @@ sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev l
 
 # install picom build tools
 
-sudo apt-get install meson ninja-build
+sudo apt-get -y install meson ninja-build
 
 
 ########## install pywal
 
-sudo apt install imagemagick
+sudo apt install -y imagemagick
 
 pip3 install pywal
 
@@ -133,7 +136,7 @@ sudo apt-get install -y nodejs
 
 ## remove regolith config
 
-sudo apt remove regolith-i3-workspace-config
+sudo apt remove -y regolith-i3-workspace-config
 
 ## pull config
 
