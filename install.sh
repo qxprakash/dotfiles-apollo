@@ -10,10 +10,13 @@ export DEBIAN_FRONTEND=noninteractive
 wget -qO - https://archive.regolith-desktop.com/regolith.key | gpg --dearmor | sudo tee /usr/share/keyrings/regolith-archive-keyring.gpg > /dev/null
 
 # Add the repository URL to your local apt
-echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable jammy v3.3" | \
+echo deb "[arch=amd64 signed-by=/usr/share/keyrings/regolith-archive-keyring.gpg] https://archive.regolith-desktop.com/ubuntu/stable noble v3.3" | \
 sudo tee /etc/apt/sources.list.d/regolith.list
 
-sudo apt update -y
+# Update apt
+sudo apt update
+echo Regolith Desktop can be installed by executing: sudo apt install regolith-desktop regolith-session-flashback regolith-look-lascaille
+
 sudo apt install -y regolith-desktop
 sudo apt upgrade -y
 
