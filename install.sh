@@ -26,7 +26,7 @@ sudo apt upgrade -y
 
 ## install polybar rofi nitrogen lxappearance acpi
 
-sudo apt install -y polybar rofi flameshot transmission-gtk telegram-desktop mpv htop feh gh python3 python3-pip vim git nitrogen lxappearance libarchive-tools nemo xfce4-terminal gnome-tweaks intel-media-va-driver-non-free regolith-i3-workspace-config python-is-python3 network-manager-gnome
+sudo apt install -y polybar rofi flameshot transmission-gtk mpv htop feh gh python3 python3-pip vim git nitrogen lxappearance libarchive-tools nemo xfce4-terminal gnome-tweaks intel-media-va-driver-non-free python-is-python3 network-manager-gnome
 
 
 ## install postman
@@ -48,7 +48,7 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 
 sudo apt update -y
 
-sudo apt install -y brave-browser
+sudo apt install -y brave-browser 
 
 
 ## download deb files
@@ -93,11 +93,6 @@ wget https://github.com/dracula/gtk/archive/master.zip
 sudo unzip master.zip -d /usr/share/themes
 sudo mv /usr/share/themes/gtk-master/ /usr/share/themes/dracula
 
-## Install Mousepad
-
-sudo apt install -y wget apt-transport-https gnupg2 software-properties-common
-sudo add-apt-repository -y ppa:xubuntu-dev/staging
-sudo apt install -y mousepad
 
 ## Prevent app store from getting started on startup
 
