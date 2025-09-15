@@ -69,11 +69,6 @@ curl -o ferdium.deb -L https://github.com/ferdium/ferdium-app/releases/download/
 # install .deb files
 sudo dpkg -i *.deb
 
-## install vs code 
-
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
-sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt -y install code
 
 ## install fonts
 
