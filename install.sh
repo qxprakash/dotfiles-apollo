@@ -5,7 +5,7 @@ shopt -s expand_aliases
 sudo pacman -Syu
 
 # Install base packages (matching PopOS script structure)
-sudo pacman -Sy ttf-font-awesome qt5ct papirus-icon-theme noto-fonts-emoji noto-fonts neofetch ttf-fira-code htop btop rofi telegram-desktop alacritty xfce4-taskmanager element-desktop obs-studio gparted flameshot deluge-gtk git nitrogen vim github-cli p7zip polybar nemo nemo-fileroller intel-media-driver intel-gpu-tools libva-intel-driver libva ffmpeg libva-utils libarchive xpdf mpv acpi lxappearance networkmanager-applet python python-pip --noconfirm
+sudo pacman -Sy ttf-font-awesome qt5ct papirus-icon-theme noto-fonts-emoji noto-fonts ttf-fira-code htop btop rofi telegram-desktop alacritty xfce4-taskmanager element-desktop obs-studio gparted flameshot deluge-gtk git nitrogen vim github-cli p7zip polybar nemo nemo-fileroller intel-media-driver intel-gpu-tools libva-intel-driver libva ffmpeg libva-utils libarchive xpdf mpv acpi lxappearance python python-pip --noconfirm
 
 # Install nvidia drivers
 sudo pacman -S nvidia-installer-dkms --noconfirm
