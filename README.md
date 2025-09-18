@@ -50,7 +50,8 @@ Here's a list of the key applications and components used in this configuration:
 
 ### To Be Implemented
 
-* [ ] Add web search functionality to Rofi, or ideally, integrate an AI assistant like ChatGPT.
-* [ ] Try out hyprland ?
 * [ ] Always listening self hosted llm with VAD and Endpointing.
+* [ ] Trim down packages , fonts are bloated should be bare minimum for powerline
+* [ ] trim down dev packages and scratchpad test
+* [ ] End to end test
 
